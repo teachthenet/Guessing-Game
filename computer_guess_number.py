@@ -13,12 +13,20 @@ if human_response == "l":
     human_response = raw_input("Is your number 7? ")
     if human_response == "l":
         human_response = raw_input("Is your number 9? ")
-        #...
+        if human_response == "l":
+            human_response = raw_input("Is your number 10? ")
+        elif human_response == "h":
+            human_response = raw_input("Is your number 8? ")
     elif human_response == "h":
         human_response = raw_input("Is your number 6? ")
 elif human_response == "h":
     human_response = raw_input("Is your number 2? ")
-    #...
+    if human_response == "l":
+        human_response = raw_input("Is your number 3? ")
+        if human_response == "l":
+            human_response = raw_input("Is your number 4? ")
+    elif human_response == "h":
+        human_response = raw_input("Is your number 1? ")
         
 if human_response == "y":
     print "Hooray!" 
@@ -28,4 +36,4 @@ else:
     
 #Challenge 1
 #   The above script has two sections of code missing, denoted by the #...
-#   Fix those missing sections of code.
+#   Fix those missing sections of code. 

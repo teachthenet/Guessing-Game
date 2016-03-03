@@ -1,19 +1,23 @@
 import random
 
-random_number = random.randrange(10) + 1
+random_number = random.randrange(100) + 1
 
-print "Let's play a game!"
-print "I've chosen a number between 1-10. Guess what it is!"
+name = raw_input("What is your name? ")
 
+print "Let's play a game, "+name+"!"
+print "I've chosen a number between 1-100. Guess what it is!"
+
+total_guesses = 0
 human_guess = -1
 while human_guess != random_number:
     human_guess = int(raw_input("Your guess: "))
+    total_guesses += 1
     if human_guess > random_number:
         print "Nope, it's lower..."
     elif human_guess < random_number:
         print "Nope, it's higher..."
 
-print "You got it!"
+print "You got it in "+str(total_guesses)+" guesses!"
 
 
 # CHALLENGE 1
